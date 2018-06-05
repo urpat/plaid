@@ -837,7 +837,7 @@ class Plaid
             $request = self::client()->post('institutions/search', [
                 'json' => [
                     'query' => $query,
-                    'products' => null,
+                    'products' => $product,
                     'public_key' => config('plaid.public_key'),
                     'options' => [
                         'include_display_data' => true
